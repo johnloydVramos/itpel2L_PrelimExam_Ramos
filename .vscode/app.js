@@ -13,16 +13,15 @@ const clear =()=>{
   amountInput.value = '';
 };
 
-const presentAlert = ()=> {
+const inputAlert = ()=> {
   const alert = document.createElement('ion-alert');
   alert.cssClass = 'my-custom-class';
   alert.header = '!ALERT!';
-  alert.subHeader = 'INPUT WARNING';
   alert.message = 'Please Enter Reason and Amount';
   alert.buttons = ['OK', 'Cancel'];
 
   document.body.appendChild(alert);
-  alert.present();
+   alert.present();
 }
 
 
@@ -36,7 +35,7 @@ addBtn.addEventListener('click', () => {
 
     if(reasonEntered.trim().length <= 0 || amountEntered <= 0 ||
     amountEntered.trim().length <= 0) {
-      presentAlert();
+      inputAlert();
       return;
     }
   
